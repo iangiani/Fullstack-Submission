@@ -3,6 +3,8 @@ const app = express()
 
 app.use(express.json())
 
+app.use(express.static('dist'))
+
 const morgan = require('morgan')
 
 morgan.token('body', (request) => {
@@ -104,8 +106,6 @@ app.post('/api/persons', (request, response) => {
   persons = persons.concat(newPerson)
   response.status(201).json(newPerson)
 })
-
-app.use(express.static('dist'))
 
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
