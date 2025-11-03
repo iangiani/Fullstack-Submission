@@ -3,6 +3,7 @@ node_modules/
 
 # build outputs
 dist/
+!part3/phonebook/dist
 build/
 
 # env files
