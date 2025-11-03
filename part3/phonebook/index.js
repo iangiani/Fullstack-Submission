@@ -14,6 +14,10 @@ morgan.token('body', (request) => {
 
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :body'))
 
+app.get('/', (request, response) => {
+  response.send('<h1>Phonebook is running</h1>')
+})
+
 let persons = [
   { 
     "id": "1",

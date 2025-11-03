@@ -44,3 +44,27 @@ content-type: application/json
   "name": "Arto Hellas",
   "number": "123-456789"
 }
+
+### 3.10
+GET https://fullstack-submission-qoz8.onrender.com/api/persons
+
+### 3.10
+GET https://fullstack-submission-qoz8.onrender.com/api/persons/1
+
+### 3.10
+POST https://fullstack-submission-qoz8.onrender.com/api/persons
+content-type: application/json
+
+{
+  "name": "LZY",
+  "number": "123"
+}
+
+### 3.10
+GET https://fullstack-submission-qoz8.onrender.com/api/persons
+
+### 3.10
+DELETE https://fullstack-submission-qoz8.onrender.com/api/persons/3
+
+### 3.10
+GET https://fullstack-submission-qoz8.onrender.com/api/persons
