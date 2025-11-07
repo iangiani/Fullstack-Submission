@@ -26,6 +26,10 @@ const App = () => {
     personsServices
       .getAll()
       .then(p => setPersons(p))
+      .catch(error => {
+        console.error('Failed:', error)
+        showMessage('Failed to load data', 'error')
+      })
   }, [])
 
   const addNew = (event) => {
@@ -52,7 +56,14 @@ const App = () => {
           setNewNumber('')
           showMessage(`Updated ${updated.name}`, 'success')
         })
-        .catch(() => {
+        .catch(error => {
+          console.error(error)
+
+          if (error.response && error.response.data && error.response.data.error) {
+            showMessage(error.response.data.error, 'error')
+            return 
+          }
+
           showMessage(
             `Information of ${findperson.name} has already been removed from server`,
             'error'
@@ -72,6 +83,15 @@ const App = () => {
         setNewNumber('')
         showMessage(`Added ${newp.name}`, 'success')
       })
+      .catch(error => {
+        console.error(error)
+        
+        if (error.response && error.response.data && error.response.data.error) {
+          showMessage(error.response.data.error, 'error')
+        } else {
+          showMessage('Failed to add', 'error')
+        }
+      })
   }
 
   const deletePerson = (id, name) => {
@@ -81,8 +101,13 @@ const App = () => {
       .then(() => {
         setPersons(prev => prev.filter(p => p.id !== id))
       })
-      .catch(() => {
-        alert(`Information of ${name} has already been removed from server`)
+      .catch(error => {
+        console.error(error)
+        
+        showMessage(
+          `Information of ${name} has already been removed from server`,
+          'error'
+        )
         setPersons(prev => prev.filter(p => p.id !== id))
       })
   }
