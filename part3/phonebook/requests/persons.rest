@@ -68,3 +68,51 @@ DELETE https://fullstack-submission-qoz8.onrender.com/api/persons/3
 
 ### 3.10
 GET https://fullstack-submission-qoz8.onrender.com/api/persons
+
+### 3.13
+GET http://localhost:3001/api/persons
+
+### 3.14
+POST http://localhost:3001/api/persons
+content-type: application/json
+
+{
+  "name": "YMH",
+  "number": "456"
+}
+
+### 3.14
+GET http://localhost:3001/api/persons
+
+### 3.18
+GET http://localhost:3001/api/persons
+
+### 3.18
+GET http://localhost:3001/info
+
+### 3.18
+GET http://localhost:3001/api/persons/6908cea35697830a33ca320b
+
+### 3.18
+GET http://localhost:3001/api/persons/111111
+
+### 3.18
+POST http://localhost:3001/api/persons
+content-type: application/json
+
+{
+  "name": "PINKRAY",
+  "number": "12345"
+}
+
+### 3.18
+PUT http://localhost:3001/api/persons/690a6f2a73de405e4d8d03e2
+content-type: application/json
+
+{
+  "name": "KWIN",
+  "number": "56789"
+}
+
+### 3.18
+DELETE http://localhost:3001/api/persons/690a6f2a73de405e4d8d03e2
