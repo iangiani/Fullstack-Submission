@@ -1,0 +1,124 @@
+### 4.1
+GET http://localhost:3003/api/blogs
+Accept: application/json
+
+### 4.1
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+  "title": "Blog1",
+  "author": "ONER",
+  "url": "https://fullstack.com/1",
+  "likes": 21
+}
+
+### 4.1
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+  "title": "Blog2",
+  "author": "XIAOYU",
+  "url": "https://fullstack.com/2",
+  "likes": 99
+}
+
+### 4.2
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+  "title": "Blog3",
+  "author": "YYYY",
+  "url": "https://fullstack.com/3",
+  "likes": 12
+}
+
+### 4.15
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+  "username": "Pinkray",
+  "name": "Minghui Yue",
+  "password": "2199999"
+}
+
+### 4.16
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+  "username": "LLLL",
+  "name": "Zheng",
+  "password": "219912"
+}
+
+### 4.16
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+  "username": "yy",
+  "name": "Less",
+  "password": "1111111"
+}
+
+### 4.16
+POST http://localhost:3003/api/users
+Content-Type: application/json
+
+{
+  "username": "yyyyyy",
+  "name": "Less",
+  "password": "11"
+}
+
+### 4.17
+GET http://localhost:3003/api/blogs
+
+### 4.17
+GET http://localhost:3003/api/users
+
+### 4.18
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+  "username": "Pinkray",
+  "password": "2199999"
+}
+
+### 4.18
+POST http://localhost:3003/api/login
+Content-Type: application/json
+
+{
+  "username": "LLLL",
+  "password": "219912"
+}
+
+
+### 4.19 
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlBpbmtyYXkiLCJpZCI6IjY5MTUwZWUwODI2ZmM4YmE4ZTQ4YzM0YiIsImlhdCI6MTc2Mjk5NTA4OCwiZXhwIjoxNzYyOTk4Njg4fQ.9XBDMNdsprOsFflJmGICjULtDrNIyPQPtk0mJPtIF3w
+
+{
+  "title": "login blog",
+  "author": "Yangyang",
+  "url": "http://blog.com/lb",
+  "likes": 22
+}
+
+### 4.23
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+  "title": "without token",
+  "author": "Yueyue",
+  "url": "http://blog.com/nt",
+  "likes": 99
+}
